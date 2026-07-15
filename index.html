@@ -260,9 +260,10 @@
     summary{font-weight:600}
     summary .plus{display:none}
 
-    /* keep units whole across the fold */
-    section{padding:20px 0; break-inside:avoid}
-    .step, .card, .promises li, .slip .queries li, .record, .clip{break-inside:avoid}
+    /* Keep the small units whole across the fold, but let sections themselves
+       flow — break-inside:avoid on a section this tall strands it on its own page. */
+    section{padding:20px 0}
+    .step, .card, .promises li, .slip .queries li, .record, .clip, details{break-inside:avoid}
     h1,h2,h3{break-after:avoid}
     .slip{break-before:page}
   }
